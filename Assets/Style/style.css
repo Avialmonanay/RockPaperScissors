@@ -1,0 +1,28 @@
+html {
+background-color: rgb(167, 164, 166);
+}
+
+
+main {
+    background-color: yellow;
+    width: 40%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: 16% 0% 20% 30%;
+}
+
+
+.options{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: red;
+    justify-content: space-between;
+}
+
+.options button {
+    font-size: 200%;
+    width: 33%;
+
+}

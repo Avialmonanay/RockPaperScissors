@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- styling and reference data -->
+
 <head>
     <link rel="stylesheet" href="Assets/Style/style.css" />
     <title>Rock Paper Scissors</title>
@@ -11,25 +12,26 @@
 
 
 
-<main>
-    <div>
-        <h2>Computer Choice:<span id="computer-choice"></span></h2>
-        <h2>Your Choice:<span id="user-choice"></span></h2>
-        <h2>Results:<span id="results"></span></h2>
-        <h2>Wins:<span id="computer-choice"></span></h2>
-        <h2>Losses:<span id="user-choice"></span></h2>
-        <h2>Draws:<span id="results"></span></h2>
+    <main>
+        <div>
+            <h2>Computer Choice:<span id="computer-choice"></span></h2>
+            <h2>Your Choice:<span id="user-choice"></span></h2>
+            <h2>Results:<span id="results"></span></h2>
+            <h2>Wins:<span id="wins"></span>0</h2>
+            <h2>Losses:<span id="losses"></span>0</h2>
+            <h2>Draws:<span id="draws"></span>0</h2>
 
-    </div>    
+        </div>
         <div class="options">
-        <button id="Rock">Rock</button>
-        <button id="Paper">Paper</button>
-        <button id="Scissors">Scissors</button>
+            <button type="button" id="Rock" onclick="javascript:setval(0)">Rock</button>
+            <button type="button" id="Paper" onclick="javascript:setval(1)">Paper</button>
+            <button type="button" id="Scissors" onclick="javascript:setval(2)">Scissors</button>
         </div>
     </main>
 
-    </body>
+</body>
+
+<script src="Assets/Java/java.js"></script>
 </html>
 
 
-<!-- <script src="Assets/Java/java.js"></script> -->

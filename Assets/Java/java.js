@@ -1,50 +1,62 @@
+var Player = "";
+function setval(varval)
+{
+Player= varval;
+console.log(Player)
+}
+
+console.log(Player)
+
 function myfunction() {
 
 
-    var Player = prompt("Choose Rock, Paper, or Scissors");
+
 
     var choices =["Rock", "Paper", "Scissors"];
-    var Computerchoice = choices[Math.floor(Math.random() * choices.length)]
+    var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+    var Playerchoice=choices[Player];
+    console.log(Playerchoice)
 
-check(Computerchoice, Player);
+check(Computerchoice, Playerchoice);
 }
 
 
-function check(Computerchoice,Player) {
+function check(Computerchoice,Playerchoice) {
     var result;
 
-    if (Computerchoice=="Rock" && Player=="Scissors"){
+    if (Computerchoice=="Rock" && Playerchoice=="Scissors"){
         result= "You Lost!"
     }
-    else if (Computerchoice=="Rock" && Player=="Paper"){
+    else if (Computerchoice=="Rock" && Playerchoice=="Paper"){
         result= "You Win!"
     }
-    else if (Computerchoice=="Rock" && Player=="Rock"){
+    else if (Computerchoice=="Rock" && Playerchoice=="Rock"){
         result= "It's a Draw!"
     }
-    else if (Computerchoice=="Scissors" && Player=="Scissors"){
+    else if (Computerchoice=="Scissors" && Playerchoice=="Scissors"){
         result= "It's a Draw!"
     }
-    else if (Computerchoice=="Scissors" && Player=="Paper"){
+    else if (Computerchoice=="Scissors" && Playerchoice=="Paper"){
         result= "You Win!"
     }
-    else if (Computerchoice=="Scissors" && Player=="Rock"){
+    else if (Computerchoice=="Scissors" && Playerchoice=="Rock"){
+        result= "You Win"
+    }
+    else if (Computerchoice=="Paper" && Playerchoice=="Rock"){
+        result= "You Lost!"
+    }
+    else if (Computerchoice=="Paper" && Playerchoice=="Scissors"){
         result= "You Lost"
     }
-    else if (Computerchoice=="Paper" && Player=="Rock"){
-        result= "You Win!"
-    }
-    else if (Computerchoice=="Paper" && Player=="Scissors"){
-        result= "You Lost"
-    }
-    else if (Computerchoice=="Paper" && Player=="Paper"){
+    else if (Computerchoice=="Paper" && Playerchoice=="Paper"){
         result= "It's a Draw!"
     }
 
-alert("Computer chose " + Computerchoice);
-alert(result);
+
 }
 myfunction()
+
+
 
 
 

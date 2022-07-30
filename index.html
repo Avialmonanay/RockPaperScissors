@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- styling and reference data -->
 
 <head>
     <link rel="stylesheet" href="Assets/Style/style.css" />
@@ -14,24 +13,39 @@
 
     <main>
         <div>
-            <h2>Computer Choice:<span id="computer-choice"></span></h2>
-            <h2>Your Choice:<span id="user-choice"></span></h2>
-            <h2>Results:<span id="results"></span></h2>
-            <h2>Wins:<span id="wins"></span>0</h2>
-            <h2>Losses:<span id="losses"></span>0</h2>
-            <h2>Draws:<span id="draws"></span>0</h2>
+            <div>
+            <h2>Computer's Choice: <span id="computer"></span></h2>
+            </div>
+
+            <div>
+            <h2>Results: <span id="result"></span></h2>
+            </div>
+
+            <div class="playerScore">
+            <h2>Wins: <span class="wins-count count"></span>0</h2>
+            </div>
+
+            <div class="computerScore">
+            <h2>Losses: <span class="losses-count count"></span>0</h2>
+            </div>
+
+            <div class="drawScore">
+            <h2>Draws: <span class="draws-count count"></span>0</h2>
+            </div>
 
         </div>
         <div class="options">
-            <button type="button" id="Rock" onclick="javascript:setval(0)">Rock</button>
-            <button type="button" id="Paper" onclick="javascript:setval(1)">Paper</button>
-            <button type="button" id="Scissors" onclick="javascript:setval(2)">Scissors</button>
+            <button id="btn1">Rock</button>
+            <button id="btn2" >Paper</button>
+            <button id="btn3">Scissors</button>
         </div>
     </main>
-
+    
+    
+    <script src="Assets/Java/JavaV2.js"></script>
 </body>
 
-<script src="Assets/Java/java.js"></script>
+
 </html>
 
 

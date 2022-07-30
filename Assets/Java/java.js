@@ -1,11 +1,13 @@
 var Player = "";
+
 function setval(varval)
 {
 Player= varval;
-console.log(Player)
 }
 
 console.log(Player)
+
+
 
 function myfunction() {
 
@@ -52,6 +54,7 @@ function check(Computerchoice,Playerchoice) {
         result= "It's a Draw!"
     }
 
+    alert(result)
 
 }
 myfunction()

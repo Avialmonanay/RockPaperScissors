@@ -1,6 +1,8 @@
 function myfunction() {
 
-
+    let playerScore = 0;
+    let computerScore = 0;
+    let drawScore = 0;
 
     const btn1 = document.getElementById("btn1");
     console.log(btn1);
@@ -13,6 +15,9 @@ function myfunction() {
 
     
     btn1.addEventListener("click", function (e) {
+        const drawScoreBoard = document.querySelector('.d-count');
+        const playerScoreBoard = document.querySelector('.w-count');
+        const computerScoreBoard = document.querySelector('.l-count');
         var choices = ["Rock", "Paper", "Scissors"];
         var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
         document.getElementById("computer").innerHTML = Computerchoice;
@@ -20,12 +25,18 @@ function myfunction() {
         
         if (Computerchoice == "Rock") {
             result = "It's a Draw!"
+            drawScore++;
+                drawScoreBoard.textContent = drawScore;
         }
         else if (Computerchoice == "Scissors") {
             result = "You Win!"
+            playerScore++;
+                playerScoreBoard.textContent = playerScore;
         }
         else {
             result = "You Lost!"
+            computerScore++;
+                computerScoreBoard.textContent = computerScore;
         }
     
         if (result == "You Win!") {
@@ -44,19 +55,27 @@ function myfunction() {
     
     //Paper Button Click Event
     btn2.addEventListener("click", function (e) {
-        console.log("Paper has been selected");
+        const drawScoreBoard = document.querySelector('.d-count');
+        const playerScoreBoard = document.querySelector('.w-count');
+        const computerScoreBoard = document.querySelector('.l-count');
         var choices = ["Rock", "Paper", "Scissors"];
         var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
         document.getElementById("computer").innerHTML = Computerchoice;
     
         if (Computerchoice == "Rock") {
-            result = "You Win!"
+            result = "You Win!";
+            playerScore++;
+                playerScoreBoard.textContent = playerScore;
         }
         else if (Computerchoice == "Scissors") {
-            result = "You Lost!"
+            result = "You Lost!";
+            computerScore++;
+                computerScoreBoard.textContent = computerScore;
         }
         else{
-            result = "It's a Draw!"
+            result = "It's a Draw!";
+            drawScore++;
+                drawScoreBoard.textContent = drawScore;
         }
     
     
@@ -70,21 +89,30 @@ function myfunction() {
     
     //Scissors Button Click Event
     btn3.addEventListener("click", function (e) {
-        console.log("Scissors has been selected");
+        const drawScoreBoard = document.querySelector('.d-count');
+        const playerScoreBoard = document.querySelector('.w-count');
+        const computerScoreBoard = document.querySelector('.l-count');
         var choices = ["Rock", "Paper", "Scissors"];
         var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
         document.getElementById("computer").innerHTML = Computerchoice;
     
         if (Computerchoice == "Rock") {
             result = "You Lost!"
+            computerScore++;
+                computerScoreBoard.textContent = computerScore;
             
         }
         else if (Computerchoice == "Scissors") {
             result = "It's a Draw!"
+            drawScore++;
+                drawScoreBoard.textContent = drawScore;
+            
             
         }
         else {
             result = "You Win!"
+            playerScore++;
+                playerScoreBoard.textContent = playerScore;
             
         }
     

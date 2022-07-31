@@ -12,6 +12,90 @@ function myfunction() {
     console.log(btn3);
 
     
+    btn1.addEventListener("click", function (e) {
+        var choices = ["Rock", "Paper", "Scissors"];
+        var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+        document.getElementById("computer").innerHTML = Computerchoice;
+        
+        
+        if (Computerchoice == "Rock") {
+            result = "It's a Draw!"
+        }
+        else if (Computerchoice == "Scissors") {
+            result = "You Win!"
+        }
+        else {
+            result = "You Lost!"
+        }
+    
+        if (result == "You Win!") {
+            console.log ("Additional win if")
+        }
+        else if (result == "You Lost!"){
+            console.log("additional Loss if")
+        }
+        else if (result == "It's a Draw!"){
+            console.log("Additional Draw If")
+        }
+    
+        document.getElementById("result").innerHTML = result;
+    });
+    
+    
+    //Paper Button Click Event
+    btn2.addEventListener("click", function (e) {
+        console.log("Paper has been selected");
+        var choices = ["Rock", "Paper", "Scissors"];
+        var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+        document.getElementById("computer").innerHTML = Computerchoice;
+    
+        if (Computerchoice == "Rock") {
+            result = "You Win!"
+        }
+        else if (Computerchoice == "Scissors") {
+            result = "You Lost!"
+        }
+        else{
+            result = "It's a Draw!"
+        }
+    
+    
+    
+    
+    
+    
+        document.getElementById("result").innerHTML = result;
+    });
+    
+    
+    //Scissors Button Click Event
+    btn3.addEventListener("click", function (e) {
+        console.log("Scissors has been selected");
+        var choices = ["Rock", "Paper", "Scissors"];
+        var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+        document.getElementById("computer").innerHTML = Computerchoice;
+    
+        if (Computerchoice == "Rock") {
+            result = "You Lost!"
+            
+        }
+        else if (Computerchoice == "Scissors") {
+            result = "It's a Draw!"
+            
+        }
+        else {
+            result = "You Win!"
+            
+        }
+    
+    
+    
+        document.getElementById("result").innerHTML = result;
+    });
+
+
+
+
 }
 
 
@@ -19,91 +103,91 @@ function myfunction() {
 
 
 
-//Rock Button Click Event
+// //Rock Button Click Event
 
-btn1.addEventListener("click", function (e) {
-    var choices = ["Rock", "Paper", "Scissors"];
-    var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
-    document.getElementById("computer").innerHTML = Computerchoice;
+// btn1.addEventListener("click", function (e) {
+//     var choices = ["Rock", "Paper", "Scissors"];
+//     var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+//     document.getElementById("computer").innerHTML = Computerchoice;
     
     
-    if (Computerchoice == "Rock") {
-        result = "It's a Draw!"
-    }
-    else if (Computerchoice == "Scissors") {
-        result = "You Win!"
-    }
-    else {
-        result = "You Lost!"
-    }
+//     if (Computerchoice == "Rock") {
+//         result = "It's a Draw!"
+//     }
+//     else if (Computerchoice == "Scissors") {
+//         result = "You Win!"
+//     }
+//     else {
+//         result = "You Lost!"
+//     }
 
-    if (result == "win") {
-        console.log ("Additional win if")
-    }
-    else if (result == "loss"){
-        console.log("additional Loss if")
-    }
-    else if (result == "draw"){
-        console.log("Additional Draw If")
-    }
+//     if (result == "win") {
+//         console.log ("Additional win if")
+//     }
+//     else if (result == "loss"){
+//         console.log("additional Loss if")
+//     }
+//     else if (result == "It's a Draw!"){
+//         console.log("Additional Draw If")
+//     }
 
-    document.getElementById("result").innerHTML = result;
-});
-
-
-//Paper Button Click Event
-btn2.addEventListener("click", function (e) {
-    console.log("Paper has been selected");
-    var choices = ["Rock", "Paper", "Scissors"];
-    var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
-    document.getElementById("computer").innerHTML = Computerchoice;
-
-    if (Computerchoice == "Rock") {
-        result = "win"
-        console.log("You Win!")
-    }
-    else if (Computerchoice == "Scissors") {
-        result = "loss"
-        console.log("You Loose!")
-    }
-    else{
-        result = "draw"
-        console.log("Draw!")
-    }
+//     document.getElementById("result").innerHTML = result;
+// });
 
 
+// //Paper Button Click Event
+// btn2.addEventListener("click", function (e) {
+//     console.log("Paper has been selected");
+//     var choices = ["Rock", "Paper", "Scissors"];
+//     var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+//     document.getElementById("computer").innerHTML = Computerchoice;
+
+//     if (Computerchoice == "Rock") {
+//         result = "You Win!"
+//         console.log("You Win!")
+//     }
+//     else if (Computerchoice == "Scissors") {
+//         result = "You Lost!"
+//         console.log("You Loose!")
+//     }
+//     else{
+//         result = "It's a Draw!"
+//         console.log("Draw!")
+//     }
 
 
 
 
-    document.getElementById("result").innerHTML = result;
-});
 
 
-//Scissors Button Click Event
-btn3.addEventListener("click", function (e) {
-    console.log("Scissors has been selected");
-    var choices = ["Rock", "Paper", "Scissors"];
-    var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
-    document.getElementById("computer").innerHTML = Computerchoice;
-
-    if (Computerchoice == "Rock") {
-        result = "loss"
-        console.log("You Lost!")
-    }
-    else if (Computerchoice == "Scissors") {
-        result = "draw"
-        console.log("Draw!")
-    }
-    else {
-        result = "win"
-        console.log("You Win!")
-    }
+//     document.getElementById("result").innerHTML = result;
+// });
 
 
+// //Scissors Button Click Event
+// btn3.addEventListener("click", function (e) {
+//     console.log("Scissors has been selected");
+//     var choices = ["Rock", "Paper", "Scissors"];
+//     var Computerchoice = choices[Math.floor(Math.random() * choices.length)];
+//     document.getElementById("computer").innerHTML = Computerchoice;
 
-    document.getElementById("result").innerHTML = result;
-});
+//     if (Computerchoice == "Rock") {
+//         result = "You Lost!"
+        
+//     }
+//     else if (Computerchoice == "Scissors") {
+//         result = "It's a Draw!"
+        
+//     }
+//     else {
+//         result = "You Win!"
+        
+//     }
+
+
+
+//     document.getElementById("result").innerHTML = result;
+// });
 
 
 
